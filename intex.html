@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Management Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Farm Management Dashboard</h1>
+        </div>
+    </header>
+    <nav>
+        <ul class="container">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#crop-management">Crop Management</a></li>
+            <li><a href="#inventory-management">Inventory Management</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <div class="dashboard-cards">
+                <div class="card">
+                    <h3>Soil Condition</h3>
+                    <div class="card-content">
+                        <p><strong>Moisture:</strong> 60%</p>
+                        <p><strong>pH Level:</strong> 6.5</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Current Crops</h3>
+                    <div class="card-content">
+                        <p><strong>Wheat:</strong> Growing</p>
+                        <p><strong>Corn:</strong> Harvesting</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="crop-management">
+            <h2>Crop Management</h2>
+            <form id="crop-form">
+                <label for="crop-name">Crop Name:</label>
+                <input type="text" id="crop-name" name="crop-name" placeholder="e.g., Wheat" required>
+                
+                <label for="growth-stage">Growth Stage:</label>
+                <select id="growth-stage" name="growth-stage" required>
+                    <option value="">Select stage</option>
+                    <option value="planting">Planting</option>
+                    <option value="growing">Growing</option>
+                    <option value="harvesting">Harvesting</option>
+                </select>
+                
+                <button type="submit">Add Crop</button>
+            </form>
+            <div id="crop-list" class="list"></div>
+        </section>
+        <section id="inventory-management">
+            <h2>Inventory Management</h2>
+            <form id="inventory-form">
+                <label for="item-name">Item Name:</label>
+                <input type="text" id="item-name" name="item-name" placeholder="e.g., Fertilizer" required>
+                
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" placeholder="e.g., 50" required>
+                
+                <button type="submit">Add Item</button>
+            </form>
+            <div id="inventory-list" class="list"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Farm Management</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
